@@ -1,0 +1,713 @@
+/*============= RESET STYLE =============
+FONTS:
+Body: font-family: 'Lato', sans-serif;
+Nav & Headings: font-family: 'Roboto', sans-serif;
+*/
+
+/*-- iPhone X Remove Gutters
+Ignore W3C Validation error for this style. --*/
+html {
+   padding: env(safe-area-inset);
+}
+
+/*-- Body Resets --*/
+body {
+   background: #f9f9f9;
+   font-family: 'Lato', sans-serif;
+   font-size: 1.15rem;
+   color: #293346;
+}
+
+/*-- Option: Add Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+   padding: 1rem;
+ }
+
+/*-- Remove Blue Browser Outline Around Buttons in Chrome --*/
+a:focus,
+button:focus {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Pointer Cursor On Links & Buttons --*/
+a, .btn, button {
+   cursor: pointer!important;
+}
+
+/*-- Max-width Container For Elements
+other than navbar, carousel, banner & footer --*/
+.wrapper {
+	max-width: 1220px;
+   margin: 0 auto;
+   padding: 0 1rem;
+   overflow: hidden;
+}
+
+/*-- Headings --*/
+h1 {
+   font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-size: 175%;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	padding: .6rem 0;
+}
+h2, h3, h4 {
+   font-family: 'Roboto', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+h5 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
+}
+/*-- Make Paragraph 'lead' Class Text Larger--*/
+p.lead {
+   font-size: 1.1rem;
+}
+
+/*-- Remove Link Color/Underline from Phone #s --*/
+a {
+   color: #293346;
+}
+a:hover {
+   color: #293346;
+   text-decoration: none;
+}
+
+/*-- Buttons --*/
+.btn {
+   font-weight: 700;
+   text-transform: uppercase;
+   border-width: medium;
+   padding: .6rem 1.2rem;
+   margin: .5rem;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .08);
+   transition: all .3s ease;
+   border-radius: 0;
+ }
+.btn-orange {
+   border-color: #ce7b00;
+   background-color: #ce7b00;
+   color: white;
+ }
+.btn-orange:hover,
+.btn-orange:focus  {
+   border-color: #eaa032;
+   background-color: #eaa032;
+   color: white;
+}
+
+/*-- Background Colors --*/
+.bg-clear {
+   background-color: rgba(255, 255, 255, .8);
+   color: #293346;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+
+/*-- Center All Images & Set Max Width --*/
+img {
+   display: block;
+	margin: 0 auto;
+   max-width: 100%;
+   border-radius: .15rem;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar {
+   padding: .5rem 0 .3rem;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
+   text-transform: uppercase;
+   transition: background-color .5s ease;
+}
+.navbar-brand img {
+   height: 2.5rem;
+   box-shadow: none;
+}
+.svg-inline--fa.fa-bars {
+   color: #FFF;
+   font-size: 1.7rem;
+}
+.navbar.solid,
+.navbar.solid-toggle {
+   background: rgba(0, 0, 0, .7)!important;
+   transition: background-color 1s ease;
+}
+.navbar-nav li {
+   padding-right: .4rem;
+}
+.navbar-nav .nav-link {
+   font-size: 1.2rem;
+   padding-top: 0rem;
+   color: #FFF;
+   text-align: center;
+   transition: all .3s ease;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+   color: #FF9900!important;
+}
+.nav-item {
+   padding: 1rem .8rem .5rem .8rem;
+}
+
+/*--- Nav Scrolling Offset --*/
+.offset:before {
+   content: "";
+   height: 4.5rem;
+   display: block;
+   margin-top: -4.5rem;
+}
+
+/*============= CAROUSEL IMAGE SLIDER =============*/
+
+.carousel-item {
+   height: 100vh; /*--- Change Height of Image Slider --*/
+   min-height: 18.75rem; /*--- (300px for mobile) --*/
+   background: no-repeat center center scroll;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   background-color: #1A1A1A; /*--- For Firefox white between slides --*/
+ }
+.carousel-inner {
+   min-height: 100vh!important;
+   box-shadow: 0 .65rem .65rem .1rem rgba(0, 0, 0, .15);
+}
+.carousel-inner img {
+   width: auto!important;
+   min-height: 100vh;
+}
+
+/*-- Change Carousel Transition Speed --*/
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+   display: block;
+   transition: -webkit-transform 1.2s ease;
+   transition: transform 1.2s ease;
+   transition: transform 1.2s ease,-webkit-transform 1.2s ease;
+}
+
+/*-- Carousel Previous & Next Buttons --*/
+.carousel-control-prev,
+.carousel-control-next {
+   width: 8%;
+   cursor: pointer!important;
+}
+.carousel-control-next {
+   padding-right: 3.2rem!important;
+}
+.carousel-control-prev .svg-inline--fa,
+.carousel-control-next .svg-inline--fa {
+   position: absolute;
+   font-size: 2.5rem!important;
+   padding: .2rem .6rem;
+   color: #000;
+   background-color: #FFF;
+   opacity: .4;
+   transition: all .5s ease;
+}
+.carousel-control-prev .svg-inline--fa:hover,
+.carousel-control-next .svg-inline--fa:hover {
+   color: #000;
+   background-color: #FFF;
+   box-shadow: 0 0 .65rem rgba(0, 0, 0, .15);
+   opacity: .9;
+   cursor: pointer;
+   transition: all .5s ease;
+}
+
+/*-- Make Carousel Prev/Next Buttons Visible On Hover --*/
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s linear 1000s, opacity 1000ms;
+}
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+   visibility: visible !important;
+   opacity: 1;
+   transition: visibility 0s linear 0s, opacity 1000ms;
+}
+
+/*-- Carousel Caption --*/
+.carousel-caption {
+   left: 12%;
+   right: 12%;
+   position: absolute;
+   transform: translateY(-50%);
+   top: 55%;
+}
+.carousel-caption.text-left,
+.carousel-caption.text-right {
+   top: 55%;
+}
+.carousel-caption p {
+   font-weight: 500;
+}
+
+/*============= ABOUT SECTION =============*/
+
+.title-underline {
+   margin: 1rem auto 1.5rem;
+   width: 5rem;
+   height: .2rem;
+   background-color: #ce7b00;
+}
+.about .svg-inline--fa {
+   color: #ce7b00;
+   font-size: 1.15rem;
+   margin-left: 0;
+   padding-left: 0;
+}
+.about p {
+   font-size: .95rem;
+}
+.about span {
+   color: #ce7b00;
+   text-transform: none;
+}
+.about span a {
+   color: #ce7b00;
+}
+ 
+/*===== FIRST BACKGROUND IMAGES =====*/
+
+/*--- First Fixed Background Image --*/
+#fixed {
+   background-image: url('../img/map.jpg');
+   z-index: -1;
+   position: fixed;
+   display: block;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+   -webkit-transform: translateZ(0);
+           transform: translateZ(0);
+   will-change: transform;
+}
+ 
+/*--- Second Fixed Background Image --*/
+#fixed2 {
+   background-image: url('../img/map2.jpg');
+   z-index: -1;
+   position: fixed;
+   display: block;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center center;
+   -webkit-transform: translateZ(0);
+           transform: translateZ(0);
+   will-change: transform;
+}
+
+/*-- Darken Background Images --*/
+.fixed-overlay {
+   background-color: rgba(0, 0, 0, 0.35);
+   z-index: 1000!important;
+}
+
+/*--- iOS Fixed Background Image --*/
+.fixed-background {
+   position: relative;
+   width: 100%;
+}
+.fixed-wrap {
+   clip: rect(0, auto, auto, 0);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -999!important;
+}
+
+/*============= PORTFOLIO GALLERY FILTER / LIGHTBOX =============*/
+
+/*-- Project Gallery Menu --*/
+.gallery {
+   width: 100%!important;
+}
+.navbar.projects {
+   min-height: 1rem;
+   letter-spacing: .05rem;
+   background-color: #160D00!important;
+   color: #FFF;
+   text-shadow: none!important;
+   margin-bottom: 1rem;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+}
+.filter ul li {
+   padding: .5rem;
+}
+.navbar.projects .navbar-nav .nav-link {
+   font-size: 1.2rem;
+   padding-top: 0rem;
+   text-align: center;
+   text-shadow: none!important;
+   transition: all .3s ease;
+}
+.filter ul li.filter-active a.nav-link.filter,
+a.filter.is-checked,
+li a.nav-link.filter.active,
+li a.nav-link.filter:hover {
+   color: #ce7b00!important;
+   cursor: pointer!important;
+}
+a.nav-link.filter {
+   padding-left: 1rem;
+}
+ 
+/*-- Filter Gallery Layout --*/
+.element-item {
+   position: relative;
+   float: left;
+   width: 33%;
+   min-height: 14rem;
+   padding: .6rem;
+}
+.element-item img {
+   width: 100%;
+   margin-bottom: 0!important;
+   height: auto;
+   display:block;
+   transition: opacity .5s ease-out;
+}
+.element-item a img:hover {
+   opacity: .7!important;
+}
+
+/*-- Photo Gallery without Filter --*/
+.img-popup2 img {
+   transition: opacity .3s ease-out;
+}
+.img-popup2 img:hover {
+   opacity: .7!important;
+   transition: opacity .2s ease-in;
+}
+
+/*============= CALLOUT =============*/
+
+/*-- Border Around Callout Text & Button --*/
+.callout-border {
+   border: .15rem solid #2d2519;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+}
+
+/*============= RATES SECTION =============*/
+
+.price-flex {
+   display: flex;
+}
+.pricing-column {
+   background-color: white;
+   height: 100%;
+   padding: 1.6rem;
+   border-top: .25rem solid #eaa032;
+   box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.075);
+   overflow: hidden;
+   position: relative; /*-- Ribon --*/
+}
+.pricing-column h4 {
+   font-size: 1.1rem;
+   font-weight: 700;
+}
+.ribbon {
+   background-color: #6c757d;
+   color: white;
+   width: 10rem;
+   height: 2rem;
+   font-size: .8rem;
+   font-weight: 700;
+   padding-top: .4rem;
+   position: absolute;
+   transform: rotate(45deg);
+   right: -2.8rem;
+   top: 1.5rem;
+   box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.25);
+}
+
+/*============= CONTACT SECTION =============*/
+
+#contact {
+   background-color: #323232;
+   color: white;
+}
+#contact img {
+   height: 3.2rem;
+   margin: 0 0!important;
+   padding-bottom: .9rem;
+}
+#contact a {
+   color: white;
+}
+
+/*-- Contact Social Icons --*/
+ul.social {
+   display: table;
+   list-style-type: none;
+   padding: 0;
+}
+ul.social li {
+   display: inline;
+   padding: 0 .5rem;
+}
+#contact ul.social li {
+   padding: .5rem .9rem .5rem 0;
+}
+#contact .svg-inline--fa {
+   color: white;
+   font-size: 1.9rem;
+   transition: all 0.5s ease 0s;
+   box-shadow: 0 0 .12rem rgba(0, 0, 0, .1);
+}
+#contact .svg-inline--fa:hover {
+   color: #eaa032;
+}
+
+/*-- Socket Copyright --*/
+.socket {
+   background-color: #4c4c4c;
+   color: #c1c1c1;
+}
+.socket a {
+   color: #c1c1c1!important;
+}
+
+/*-- Contact Form --*/
+.form-group {
+   margin-bottom: 1.3rem;
+   box-shadow: 0 0 .2rem rgba(0, 0, 0, .05);
+}
+.form-control {
+   background: #f9f9f9;
+   border-radius: .1rem;
+   border: .2rem solid #666;
+   color: #323232!important;
+   font-size: 1.1rem;
+}
+.form-control:focus {
+   background: #f5f6f8;
+   border: .2rem solid #eaa032;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+   color: #666;
+}
+input.btn {
+   float: right;
+}
+.controls input:focus,
+.controls textarea:focus { /*-- Remove Element Outlines in Contact Form --*/
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Top Scroll Button --*/
+.scroll-container {
+   width: 2.2rem;
+   float: right;
+}
+.top-scroll svg.svg-inline--fa {
+   font-size: 1.6rem!important;
+   height: 2.2rem;
+   width: 2.5rem;
+   color: #000!important;
+   background-color: white;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .05);
+   transition: all .5s ease;
+ }
+a.top-scroll {
+   bottom: 1.2rem;
+   position: fixed;
+   opacity: .3;
+   z-index: 1000;
+   display: none;
+}
+a.top-scroll:hover {
+   opacity: .9;
+   transition: all .5s ease;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Large (lg) devices (desktops, 992px and under) */
+@media (max-width: 991.98px) {
+   .navbar {
+      padding: .25rem 5rem;
+   }
+   .carousel-caption h2 {
+      font-size: 1.7rem;
+   }
+   .element-item {
+      width: 50%;
+      min-height: 12.6rem;
+   }
+}
+
+/* Medium (md) devices (tablets, 768px and under) */
+@media (max-width: 767.98px) {
+   .navbar {
+      padding: .2rem 2.5rem;
+   }
+   .navbar-brand img {
+      height: 2.3rem;
+   }
+   .svg-inline--fa.fa-bars {
+      font-size: 1.55rem;
+   }
+   .offset:before {
+      height: 3.2rem;
+      margin-top: -3.2rem;
+   }
+   .carousel-caption {
+      top:45%!important;
+   }
+   .carousel-caption h2 {
+      font-size: 1.5rem;
+   }
+   .btn {
+      padding: .45rem 1rem;
+   }
+   p.lead {
+      font-size: 1.05rem;
+   }
+   .navbar.projects .navbar-toggler {
+      width: 100%;
+   }
+   .navbar.projects .custom-toggler-icon {
+      float: right;
+   }
+   .element-item {
+      width: 100%;
+      min-height: 14rem;
+   }
+}
+
+/* Small (sm) devices (landscape phones, 576px and under) */
+@media (max-width: 575.98px) {
+   .carousel-caption {
+      top:52%!important;
+   }
+   .carousel-caption h2 {
+      font-size: 1.3rem;
+   }
+   .btn {
+      padding: .4rem .9rem;
+   }
+   h2 {
+      font-size: 1.8rem;
+   }
+   h3 {
+      font-size: 1.7rem;
+   }
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+/*============= WAYPOINTS =============*/
+
+/*-- OPTION: TURN OFF ANIMATION OFF COMPLETELY::
+Note: may effect line progress bar with slight delay,
+line-progressbar waypoints can be adjusted at bottom of plugins.js.--*/
+
+
+/* remove this CSS comment to activate
+
+.animated, .os-animation {
+  -webkit-animation: none!important;
+  -moz-animation: none!important;
+  -o-animation: none!important;
+  animation: none!important;
+  opacity: 1!important;
+  -webkit-animation-delay: none !important;
+  -moz-animation-delay: none !important;
+  animation-delay: none !important;
+  }
+
+*/
+
+/*-- OPTION: TURN OFF ANIMATION ON MOBILE::
+Note: may effect line progress bar with slight delay,
+line-progressbar waypoints can be adjusted at bottom of plugins.js.--*/
+
+
+/* remove this CSS comment to activate
+
+@media (max-width: 767px) {
+	.animated, .os-animation {
+	  -webkit-animation: none!important;
+	  -moz-animation: none!important;
+	  -o-animation: none!important;
+	  animation: none!important;
+	  opacity: 1!important;
+	  -webkit-animation-delay: none !important;
+	  -moz-animation-delay: none !important;
+	  animation-delay: none !important;
+	  }
+	}
+
+*/
+
+
+/*--- Prevent WayPoints from Browser Window Scrolling On Mobile --*/
+/* Devices under 768px (md) */
+@media (max-width: 767px) {
+   .row {
+     overflow-x: hidden;
+     overflow-y: hidden;
+   }
+}
+ 
+/*-- Don't modify waypoints CSS below,
+this is required for waypoints to work --*/
+.os-animation{
+   opacity: 0;
+   margin: 0!important;
+   max-width: 100%;
+}
+.os-animation.animated {
+   opacity: 1;
+}
+
+
+/*--- Fix for Navbar Jumping During Scroll --*/
+.fixed-top  {
+   -webkit-backface-visibility: hidden; /*-- Ignore Validation --*/
+}
+
+/*-- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+   margin-left: 0px !important;
+   margin-right: 0px !important;
+}
