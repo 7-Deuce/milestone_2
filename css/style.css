@@ -89,14 +89,14 @@ a:hover {
    border-radius: 0;
  }
 .btn-orange {
-   border-color: #ce7b00;
-   background-color: #ce7b00;
+   border-color: #05828e;
+   background-color: #05828e;
    color: white;
  }
 .btn-orange:hover,
 .btn-orange:focus  {
-   border-color: #eaa032;
-   background-color: #eaa032;
+   border-color: #5dbec7;
+   background-color: #5dbec7;
    color: white;
 }
 
@@ -150,7 +150,7 @@ img {
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-   color: #FF9900!important;
+   color: #05828e!important;
 }
 .nav-item {
    padding: 1rem .8rem .5rem .8rem;
@@ -258,10 +258,12 @@ img {
    margin: 1rem auto 1.5rem;
    width: 5rem;
    height: .2rem;
-   background-color: #ce7b00;
+   background-color: #05828e
+;
 }
 .about .svg-inline--fa {
-   color: #ce7b00;
+   color: #05828e
+;
    font-size: 1.15rem;
    margin-left: 0;
    padding-left: 0;
@@ -270,11 +272,13 @@ img {
    font-size: .95rem;
 }
 .about span {
-   color: #ce7b00;
+   color: #05828e
+;
    text-transform: none;
 }
 .about span a {
-   color: #ce7b00;
+   color: #05828e
+;
 }
  
 /*===== FIRST BACKGROUND IMAGES =====*/
@@ -343,7 +347,7 @@ img {
 .navbar.projects {
    min-height: 1rem;
    letter-spacing: .05rem;
-   background-color: #160D00!important;
+   background-color:#1A1A1A!important;
    color: #FFF;
    text-shadow: none!important;
    margin-bottom: 1rem;
@@ -363,7 +367,7 @@ img {
 a.filter.is-checked,
 li a.nav-link.filter.active,
 li a.nav-link.filter:hover {
-   color: #ce7b00!important;
+   color: #5dbec7!important;
    cursor: pointer!important;
 }
 a.nav-link.filter {
@@ -415,7 +419,7 @@ a.nav-link.filter {
    background-color: white;
    height: 100%;
    padding: 1.6rem;
-   border-top: .25rem solid #eaa032;
+   border-top: .25rem solid #05828e;
    box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.075);
    overflow: hidden;
    position: relative; /*-- Ribon --*/
@@ -474,7 +478,7 @@ ul.social li {
    box-shadow: 0 0 .12rem rgba(0, 0, 0, .1);
 }
 #contact .svg-inline--fa:hover {
-   color: #eaa032;
+   color: #5dbec7;
 }
 
 /*-- Socket Copyright --*/
@@ -500,7 +504,7 @@ ul.social li {
 }
 .form-control:focus {
    background: #f5f6f8;
-   border: .2rem solid #eaa032;
+   border: .2rem solid #05828e;
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
