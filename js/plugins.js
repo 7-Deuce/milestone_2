@@ -203,7 +203,7 @@ $(function () {
 
       // if the validator does not prevent form submit
       if (!e.isDefaultPrevented()) {
-          var url = "contact/contact.php"; //Location of form (apply change if moved).
+          var url = "contact/gmail-contact.php"; //Location of form (apply change if moved).
 
           // POST values in the background the the script URL
           $.ajax({
